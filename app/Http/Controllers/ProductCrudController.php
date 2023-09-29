@@ -105,7 +105,7 @@ class ProductCrudController extends Controller
         try {
             $this->validate($request, $validateData);
         } catch (ValidationException $ex) {
-            return Response::json(['errors' => $ex->errors()], HttpResponse::HTTP_UNPROCESSABLE_ENTITY);
+            return Response::json(['errors' => $ex->errors()], HttpResponse::HTTP_BAD_REQUEST);
         }
 
         return null;

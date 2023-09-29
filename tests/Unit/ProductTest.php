@@ -45,7 +45,7 @@ class ProductTest extends TestCase
 
         $response = $this->postJson('api/products', $productData);
 
-        $response->assertStatus(422);
+        $response->assertStatus(400);
     }
 
     public function test_create_product_with_missing_description_fails(): void
@@ -57,7 +57,7 @@ class ProductTest extends TestCase
 
         $response = $this->postJson('api/products', $productData);
 
-        $response->assertStatus(422);
+        $response->assertStatus(400);
         $response->assertJsonFragment(["The description field is required."]);
     }
 
@@ -71,7 +71,7 @@ class ProductTest extends TestCase
 
         $response = $this->postJson('api/products', $productData);
 
-        $response->assertStatus(422);
+        $response->assertStatus(400);
         $response->assertJsonFragment(["The price field is required."]);
     }
 
