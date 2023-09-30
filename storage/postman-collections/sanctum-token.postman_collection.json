@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "48270343-6c3b-40e5-9f9d-c683a31ea847",
+		"name": "sanctum-token",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1953155"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Ivan",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "foo@bar.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "ivan12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Ivan",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "foo@bar.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "ivan12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
