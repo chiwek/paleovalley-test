@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Request;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -26,5 +27,17 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+    }
+
+    /**
+     * Determine if the exception handler response should be JSON.
+     *
+     * @param  Request  $request
+     * @param Throwable $e
+     * @return bool
+     */
+    protected function shouldReturnJson($request, Throwable $e): bool
+    {
+        return true;
     }
 }

@@ -13,8 +13,5 @@ abstract class TestCase extends BaseTestCase
     public function setUp() : void {
 
         parent::setUp();
-
-        // reset db after every test, can be slow in big projects
-        Artisan::call('migrate:refresh');
     }
 }
